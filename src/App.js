@@ -5,12 +5,23 @@ import Basket from "./components/Basket/Basket.jsx";
 import { Routes, Route } from "react-router";
 
 function App() {
-  const [money, setMoney] = useState(1000);
+  const [money, setMoney] = useState(10000);
   const [products, setProducts] = useState([]);
   const [basket, setBasket] = useState([]);
   const [total, setTotal] = useState(0);
 
-  // const formattedMoney = money.toLocaleString();
+  const allPrice = products.map((product) => product.price);
+
+  const lowestPrice = Math.min(...allPrice);
+
+  // useEffect(() => {
+  //   const alertMessage = () => {
+  //     if (money - total < lowestPrice) {
+  //       alert("You don't have enough money to spend");
+  //     }
+  //   };
+  //   alertMessage();
+  // }, []);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")

@@ -13,11 +13,12 @@ function Basket({ basket, total, setBasket, money }) {
   return (
     <div className="basket-container">
       <div className="basket-header">
-        <h3>My Basket</h3>
-        <h3 style={{ color: "#85bb65" }}>
-          ${(money - total).toLocaleString()}
+        <h3 style={{ color: "#85bb65", fontSize: "12px" }}>
+          <span style={{ color: "black", fontSize: "12px" }}> Budget :</span> $
+          {(money - total).toLocaleString()}
         </h3>
-        <Link to="/">
+        <h3>My Basket</h3>
+        <Link className="return-button" to="/">
           Return <GiReturnArrow />{" "}
         </Link>
       </div>
@@ -62,7 +63,9 @@ function Basket({ basket, total, setBasket, money }) {
             ${total.toLocaleString()}
           </span>
         </div>
-        <button onClick={cleanBasket}>Clean The Basket</button>
+        <button className="clean-button" onClick={cleanBasket}>
+          Clean The Basket
+        </button>
       </div>
     </div>
   );

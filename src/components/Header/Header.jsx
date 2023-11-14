@@ -16,7 +16,7 @@ function Header({ money, total, basket, setBasket }) {
       <div className="logo">
         <img src={Logo} alt="#" />
       </div>
-      <div>
+      <div className="header-info">
         <h6 style={{ display: "flex", alignItems: "center" }}>
           All The Best For You
           <AiOutlineHeart
@@ -28,6 +28,10 @@ function Header({ money, total, basket, setBasket }) {
             }}
           />
         </h6>
+        <h3 style={{ color: "#85bb65", fontSize: "12px" }}>
+          <span style={{ color: "black", fontSize: "12px" }}> Budget :</span> $
+          {(money - total).toLocaleString()}
+        </h3>
       </div>
       <div className="basket-container">
         <Link to="/basket">

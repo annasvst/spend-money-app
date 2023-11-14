@@ -45,6 +45,27 @@
   margin: 0px 10px;
   color: black;
 }
+.clean-button {
+  border: 1px lightgray solid;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.clean-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: crimson;
+  color: #fff;
+}
+.return-button {
+  color: black;
+  margin-left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.return-button:hover {
+  color: blue;
+}
 @media screen and (max-width: 600px) {
   .list-info {
     font-size: 8px;
